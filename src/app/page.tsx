@@ -72,15 +72,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 flex items-center gap-5 text-xs uppercase tracking-[0.25em] text-zinc-600">
-            <span>AI Content</span>
-            <span>•</span>
-            <span>Video</span>
-            <span>•</span>
-            <span>Automation</span>
-            <span>•</span>
-            <span>Web Apps</span>
-          </div>
+          <div className="mt-16 grid grid-cols-2 gap-y-3 text-xs uppercase tracking-[0.15em] text-zinc-600 sm:flex sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
+  <span>AI Content</span>
+  <span className="hidden sm:inline">•</span>
+  <span>Video</span>
+  <span className="hidden sm:inline">•</span>
+  <span>Automation</span>
+  <span className="hidden sm:inline">•</span>
+  <span>Web Apps</span>
+</div>
         </div>
       </section>
 
