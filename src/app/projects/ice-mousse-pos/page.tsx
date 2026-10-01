@@ -1,3 +1,24 @@
+import SystemGallery from "./SystemGallery";
+
+const systemScreenshots = [
+  {
+    title: "Dashboard",
+    image: "/projects/ice-mousse-pos/Dashboard-Portfolio.png",
+  },
+  {
+    title: "Order Taking",
+    image: "/projects/ice-mousse-pos/Order_Taking-Portfolio.png",
+  },
+  {
+    title: "Orders",
+    image: "/projects/ice-mousse-pos/Orders-Portfolio.png",
+  },
+  {
+    title: "Inventory",
+    image: "/projects/ice-mousse-pos/Inventory-Portfolio.png",
+  },
+];
+
 export default function IceMoussePOS() {
   return (
     <main className="min-h-screen bg-black text-white">
@@ -24,17 +45,18 @@ export default function IceMoussePOS() {
       <section className="px-6 py-24">
         <div className="mx-auto max-w-5xl">
           <p className="text-xs uppercase tracking-[0.35em] text-zinc-600">
-            Web App • Automation
+            Business Workflow • Web App • Process Improvement
           </p>
 
           <h1 className="mt-5 text-5xl font-bold tracking-tight sm:text-7xl">
-  Ice Cream POS — Small Business Sales System
+  Small Business Workflow System
 </h1>
 
           <p className="mt-7 max-w-3xl text-xl leading-8 text-zinc-400">
-            A practical web-based order management system designed to simplify
-            reseller orders and make day-to-day operations easier.
-          </p>
+  A practical digital system developed to help a small ice cream business
+  organize orders, simplify day-to-day operations, and create a more efficient
+  workflow.
+</p>
         </div>
       </section>
 
@@ -52,16 +74,23 @@ export default function IceMoussePOS() {
           </div>
 
           <div className="leading-8 text-zinc-400">
-            <p>
-              Managing reseller orders can become difficult when information is
-              spread across conversations, notes, and manual calculations.
-            </p>
+  <p>
+    As the business grew, there was an opportunity to improve both how the
+    products were presented to customers and how day-to-day orders were
+    managed behind the scenes.
+  </p>
 
-            <p className="mt-5">
-              The goal was to create a simple system where orders could be
-              recorded, tracked, updated, and managed from one place.
-            </p>
-          </div>
+  <p className="mt-5">
+    I assisted with the customer-facing side through product photo and video
+    content for promotional campaigns, while also helping identify ways to
+    make the operational workflow more organized and efficient.
+  </p>
+
+  <p className="mt-5">
+    This led to the idea of creating a simple digital system where orders
+    could be recorded, tracked, updated, and managed from one place.
+  </p>
+</div>
         </div>
       </section>
 
@@ -77,22 +106,23 @@ export default function IceMoussePOS() {
           </h2>
 
           <p className="mt-6 max-w-3xl leading-8 text-zinc-400">
-  The system was designed around the actual workflow of a small ice cream
-  business rather than forcing the business to adapt to unnecessary
-  features.
+  The solution focused on keeping the workflow simple and practical. Instead
+  of adding unnecessary complexity, the system was structured around the
+  information the business actually needed to manage customer orders,
+  reseller transactions, and daily operations.
 </p>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {[
-              "Customer management",
-              "Flavor and quantity tracking",
-              "Order status management",
-              "Pay-later order tracking",
-              "Order updates and cancellation",
-              "Pickup workflow",
-              "Reseller pricing",
-              "Dashboard overview",
-            ].map((feature) => (
+  "Centralized customer orders",
+  "Flavor and quantity tracking",
+  "Order status management",
+  "Pay-later order tracking",
+  "Order updates and cancellation",
+  "Pickup workflow",
+  "Reseller pricing support",
+  "Dashboard overview",
+].map((feature) => (
               <div
                 key={feature}
                 className="rounded-xl border border-zinc-800 bg-zinc-950 p-5 text-zinc-300"
@@ -104,6 +134,27 @@ export default function IceMoussePOS() {
         </div>
       </section>
 
+{/* System Preview */}
+<section className="border-t border-zinc-900 px-6 py-20">
+  <div className="mx-auto max-w-5xl">
+    <p className="text-xs uppercase tracking-[0.3em] text-zinc-600">
+      System Preview
+    </p>
+
+    <h2 className="mt-4 text-3xl font-bold">
+      A clearer view of the day-to-day workflow.
+    </h2>
+
+    <p className="mt-6 max-w-3xl leading-8 text-zinc-400">
+      The system brings key business information into one place, giving the
+      business a simple overview of orders and daily activity.
+    </p>
+
+    <SystemGallery screenshots={systemScreenshots} />
+
+  </div>
+</section>
+
       {/* Technology */}
       <section className="border-t border-zinc-900 px-6 py-20">
         <div className="mx-auto max-w-5xl">
@@ -112,8 +163,8 @@ export default function IceMoussePOS() {
           </p>
 
           <h2 className="mt-4 text-3xl font-bold">
-            Built with modern web technology.
-          </h2>
+  Technology supporting a practical business workflow.
+</h2>
 
           <div className="mt-10 flex flex-wrap gap-3">
             {[
@@ -147,12 +198,50 @@ export default function IceMoussePOS() {
           </h2>
 
           <p className="mt-6 max-w-3xl leading-8 text-zinc-400">
-            I worked on translating the business requirements into a practical
-            web application, organizing the workflow, designing the interface,
-            and implementing the functionality needed to manage orders.
-          </p>
+  My role involved understanding the business workflow, identifying what
+  information needed to be tracked, organizing the process into a clearer
+  structure, and translating those requirements into a practical digital
+  system. I also worked on the interface and functionality needed to make
+  the system useful for day-to-day order management.
+</p>
         </div>
       </section>
+
+{/* Business Impact */}
+<section className="border-t border-zinc-900 px-6 py-20">
+  <div className="mx-auto max-w-5xl">
+    <p className="text-xs uppercase tracking-[0.3em] text-zinc-600">
+      Business Impact
+    </p>
+
+    <h2 className="mt-4 text-3xl font-bold">
+      Making the workflow easier to manage.
+    </h2>
+
+    <p className="mt-6 max-w-3xl leading-8 text-zinc-400">
+      The goal was not to build a complicated system, but to make the
+      day-to-day workflow more organized and easier to manage. By bringing
+      order information into one system, the business could have a clearer
+      view of active orders, customer details, payment status, and fulfillment
+      needs.
+    </p>
+
+    <div className="mt-10 grid gap-4 sm:grid-cols-3">
+      {[
+        "More organized order information",
+        "Clearer day-to-day workflow",
+        "Foundation for future automation",
+      ].map((impact) => (
+        <div
+          key={impact}
+          className="rounded-xl border border-zinc-800 bg-zinc-950 p-5 text-zinc-300"
+        >
+          {impact}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Next Steps */}
       <section className="border-t border-zinc-900 px-6 py-20">
@@ -166,12 +255,35 @@ export default function IceMoussePOS() {
           </h2>
 
           <p className="mt-6 max-w-3xl leading-8 text-zinc-400">
-            The system can continue evolving with additional reporting,
-            analytics, automation, notifications, and other features based on
-            actual business needs.
-          </p>
+  As the business grows, the workflow can continue to evolve through better
+  reporting, analytics, notifications, and automation opportunities. The
+  approach is to first understand the process, identify where improvements
+  create real value, and then introduce technology where it makes sense.
+</p>
         </div>
       </section>
+
+{/* Project Navigation */}
+<section className="border-t border-zinc-900 px-6 py-16">
+  <div className="mx-auto flex max-w-5xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+    <div>
+      <p className="text-sm text-zinc-500">
+        Interested in the process behind the work?
+      </p>
+
+      <p className="mt-2 text-lg font-medium">
+        Explore AI & Process Improvement →
+      </p>
+    </div>
+
+    <a
+      href="/ai-process-improvement"
+      className="inline-flex w-fit rounded-full border border-white/20 px-6 py-3 text-sm font-medium transition hover:bg-white hover:text-black"
+    >
+      View Process Work
+    </a>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="border-t border-zinc-900 px-6 py-8 text-center text-xs text-zinc-600">
