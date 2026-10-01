@@ -36,7 +36,7 @@ export default function Home() {
             <div className="mb-7 flex items-center gap-3">
               <span className="h-px w-10 bg-zinc-600" />
               <span className="text-xs uppercase tracking-[0.35em] text-zinc-500">
-                AI • Video • Creative • Systems
+                AI • Automation • Content • Systems
               </span>
             </div>
 
@@ -48,11 +48,11 @@ export default function Home() {
               </span>
             </h1>
             <p className="mt-4 text-xl font-medium text-zinc-300 md:text-2xl">
-  AI Video & Content Creator
+  AI Automation & Content Creator
 </p>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
-              I create AI-assisted videos, visual content, and social media concepts designed for engagement, promotion, and brand awareness — backed by real-world business and operations experience.
+              I build AI-assisted workflows, practical digital systems, and creative content that help turn ideas into useful business and marketing solutions.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -111,20 +111,20 @@ export default function Home() {
             />
 
             <ProjectCard
-              number="03"
-              category="WEB APP • AUTOMATION"
-              title="Ice Cream POS"
-              description="A practical web-based order management system created for a real small-business workflow."
-              href="/projects/ice-mousse-pos"
-            />
+  number="03"
+  category="AI • AUTOMATION"
+  title="AI & Automation"
+  description="Identifying repetitive business processes and turning them into clearer workflows, SOPs, digital systems, and AI-assisted automation opportunities."
+  href="/projects/ai-process-improvement"
+/>
 
-            <ProjectCard
-              number="04"
-              category="AI • AUTOMATION"
-              title="AI & Automation"
-              description="Workflow ideas, SOP systems, productivity improvements, and practical AI-assisted solutions."
-              href="/projects/ai-process-improvement"
-            />
+<ProjectCard
+  number="04"
+  category="WEB APP • AUTOMATION"
+  title="Ice Cream POS"
+  description="An example of an automation solution built around a small ice cream business's workflow, turning manual order tracking into a centralized digital system."
+  href="/projects/ice-mousse-pos"
+/>
           </div>
         </div>
       </section>
