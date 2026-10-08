@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-black text-white">
@@ -36,7 +38,7 @@ export default function Home() {
             <div className="mb-7 flex items-center gap-3">
               <span className="h-px w-10 bg-zinc-600" />
               <span className="text-xs uppercase tracking-[0.35em] text-zinc-500">
-                AI • Automation • Content • Systems
+                Business workflows • Digital systems • Creative technology
               </span>
             </div>
 
@@ -52,7 +54,7 @@ export default function Home() {
 </p>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
-              I build AI-assisted workflows, practical digital systems, and creative content that help turn ideas into useful business and marketing solutions.
+              I turn day-to-day business needs into practical digital systems. Start with the order workflow I built for the small ice cream business.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -89,42 +91,43 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Selected Work"
-            title="Things I&apos;ve Built"
-            description="A selection of creative projects, practical tools, and digital solutions."
+            title="See the work"
+            description="Start with a built order system, then explore finished video work, visual concept development, and process improvement."
           />
 
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             <ProjectCard
               number="01"
-              category="AI • VIDEO"
-              title="AI Video Creation"
-              description="AI-assisted video concepts, visual storytelling, advertisements, and short-form creative content."
-              href="/projects/ai-video-creation"
+              category="BUSINESS AUTOMATION • WEB APP DEVELOPMENT"
+              title="Small Ice Cream Business Order System"
+              description="A working order management system built for the small ice cream business, connecting order entry, inventory visibility, fulfillment tracking, and reseller sales."
+              href="/projects/small-ice-cream-business"
+              preview="/projects/small-ice-cream-business/Order_Taking-Portfolio.png"
             />
 
             <ProjectCard
               number="02"
-              category="AI • VISUALS"
+              category="AI VIDEO • PRODUCT STORYTELLING"
+              title="AI Video Creation"
+              description="Five finished product videos created with AI-assisted visuals and editing for a small ice cream business."
+              href="/projects/ai-video-creation"
+            />
+
+            <ProjectCard
+              number="03"
+              category="AI-ASSISTED VISUAL CONCEPTS"
               title="AI Visuals"
-              description="AI-generated images, product concepts, characters, environments, and visual assets."
+              description="A brief-led process for developing and refining visual concepts. Selected original samples will be added to this page."
               href="/projects/ai-visuals"
             />
 
             <ProjectCard
-  number="03"
-  category="AI • AUTOMATION"
-  title="AI & Automation"
-  description="Identifying repetitive business processes and turning them into clearer workflows, SOPs, digital systems, and AI-assisted automation opportunities."
-  href="/projects/ai-process-improvement"
-/>
-
-<ProjectCard
-  number="04"
-  category="WEB APP • AUTOMATION"
-  title="Ice Cream POS"
-  description="An example of an automation solution built around a small ice cream business's workflow, turning manual order tracking into a centralized digital system."
-  href="/projects/ice-mousse-pos"
-/>
+              number="04"
+              category="WORKFLOW ANALYSIS • PROCESS IMPROVEMENT"
+              title="AI-Assisted Work Process Improvement"
+              description="A lead-review workflow mapped into clear decision steps, with opportunities identified for AI assistance and automation."
+              href="/projects/ai-process-improvement"
+            />
           </div>
         </div>
       </section>
@@ -168,30 +171,22 @@ export default function Home() {
   </div>
 </section>
 
-      {/* Skills */}
+      {/* Evidence map */}
 
 <section id="skills" className="relative z-10 border-t border-zinc-900 px-6 py-28">
   <div className="mx-auto max-w-7xl">
     <SectionHeading
-      eyebrow="Capabilities"
-      title="What I Can Do"
+      eyebrow="Evidence map"
+      title="What each project lets you inspect"
     />
 
-```
 <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-800 sm:grid-cols-2 lg:grid-cols-3">
   {[
-    "AI Video & Content Creation",
-    "Video Editing",
-    "Social Media Content",
-    "AI Visual Creation",
-    "Creative Prompting",
-    "Product & Ad Concepts",
-    "Process Analysis",
-    "Workflow Documentation",
-    "SOP Development",
-    "AI-Assisted Process Improvement",
-    "Business & Operations Support",
-    "Web & Digital Solutions",
+    "Order system — order entry, Today’s Orders, and inventory screens",
+    "Order system — customer, payment, quantity, and pickup workflow",
+    "AI video — five finished product-storytelling samples",
+    "AI visuals — brief-led concept development process",
+    "Work process improvement — mapped lead-review workflow",
   ].map((skill) => (
     <div
       key={skill}
@@ -201,7 +196,6 @@ export default function Home() {
     </div>
   ))}
 </div>
-```
 
   </div>
 </section>
@@ -219,16 +213,20 @@ export default function Home() {
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-zinc-400">
-            Open to remote opportunities, freelance projects, and
-            collaborations involving AI, creative technology, automation, and
-            business solutions.
+            Have a project, workflow, or business problem you&apos;d like to discuss?
           </p>
 
           <a
-            href="mailto:your-email@example.com"
-            className="mt-10 inline-block rounded-full bg-white px-9 py-4 text-sm font-semibold text-black transition hover:scale-105 hover:bg-zinc-200"
+            href="#contact"
+            className="mx-auto mt-10 block w-fit rounded-full bg-white px-9 py-4 text-sm font-semibold text-black transition hover:scale-105 hover:bg-zinc-200"
           >
-            Get In Touch
+            Get in Touch
+          </a>
+          <a
+            href="mailto:Danielagustin223@gmail.com"
+            className="mx-auto mt-8 block w-fit text-xl font-semibold text-white underline decoration-zinc-600 underline-offset-8 transition hover:decoration-white sm:text-2xl"
+          >
+            Danielagustin223@gmail.com
           </a>
         </div>
       </section>
@@ -276,12 +274,14 @@ function ProjectCard({
   title,
   description,
   href,
+  preview,
 }: {
   number: string;
   category: string;
   title: string;
   description: string;
   href: string;
+  preview?: string;
 }) {
   return (
     <a
@@ -294,6 +294,16 @@ function ProjectCard({
 
       <div className="flex h-full flex-col justify-between">
         <div>
+          {preview && (
+            <Image
+              src={preview}
+              alt="Order entry screen showing flavor availability"
+              width={1520}
+              height={1034}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="mb-7 aspect-[16/7] w-full rounded-xl border border-white/10 object-cover object-top"
+            />
+          )}
           <p className="text-xs uppercase tracking-[0.25em] text-zinc-600">
             {category}
           </p>
