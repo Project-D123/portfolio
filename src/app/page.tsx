@@ -92,7 +92,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Selected Work"
             title="See the work"
-            description="Start with a built order system, then explore finished video work, visual concept development, and process improvement."
+            description="Explore a business order system, then follow the creative workflow from visual concept to finished campaign, alongside process improvement work."
           />
 
           <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -107,18 +107,18 @@ export default function Home() {
 
             <ProjectCard
               number="02"
-              category="AI VIDEO • PRODUCT STORYTELLING"
-              title="AI Video Creation"
-              description="Five finished product videos created with AI-assisted visuals and editing for a small ice cream business."
-              href="/projects/ai-video-creation"
+              category="AI-ASSISTED VISUAL CONCEPTS"
+              title="AI Visuals"
+              description="A brief-led process for developing and refining visual concepts, with selected ideas able to move into finished creative work."
+              href="/projects/ai-visuals"
             />
 
             <ProjectCard
               number="03"
-              category="AI-ASSISTED VISUAL CONCEPTS"
-              title="AI Visuals"
-              description="A brief-led process for developing and refining visual concepts. Selected original samples will be added to this page."
-              href="/projects/ai-visuals"
+              category="AI VIDEO • PRODUCT STORYTELLING"
+              title="AI Video Creation"
+              description="Five finished product videos created with AI-assisted visuals and editing for a small ice cream business."
+              href="/projects/ai-video-creation"
             />
 
             <ProjectCard
@@ -184,8 +184,8 @@ export default function Home() {
   {[
     "Order system — order entry, Today’s Orders, and inventory screens",
     "Order system — customer, payment, quantity, and pickup workflow",
-    "AI video — five finished product-storytelling samples",
     "AI visuals — brief-led concept development process",
+    "AI video — five finished product-storytelling samples",
     "Work process improvement — mapped lead-review workflow",
   ].map((skill) => (
     <div

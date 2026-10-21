@@ -41,7 +41,7 @@ export default function AIVideoCreation() {
         <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Project · AI video</p>
         <h1 className="mt-5 max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl">AI-assisted product video storytelling.</h1>
         <p className="mt-6 max-w-3xl text-xl leading-8 text-zinc-300">
-          Five finished video pieces for a small ice cream business are presented below. They combine AI-assisted visual elements with editing to tell product-focused stories.
+          Following visual concept development, I shape ideas into stories, produce and edit the videos, and deliver finished campaign pieces.
         </p>
       </section>
 
@@ -109,7 +109,7 @@ export default function AIVideoCreation() {
       <footer className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} Daniel John Agustin</span>
-          <a href="/projects/ai-visuals" className="transition hover:text-white">Next: AI Visuals →</a>
+          <a href="/projects/ai-visuals" className="transition hover:text-white">Explore the visual concept development behind the creative work →</a>
         </div>
       </footer>
     </main>
