@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PortfolioMascot from "@/components/PortfolioMascot";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative z-10 flex min-h-[calc(100vh-80px)] items-center px-6">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-10 py-12">
           <div className="max-w-4xl">
             <div className="mb-7 flex items-center gap-3">
               <span className="h-px w-10 bg-zinc-600" />
@@ -72,17 +73,19 @@ export default function Home() {
                 Let&apos;s Connect
               </a>
             </div>
+
+            <div className="mt-16 grid grid-cols-2 gap-y-3 text-xs uppercase tracking-[0.15em] text-zinc-600 sm:flex sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
+              <span>AI Content</span>
+              <span className="hidden sm:inline">•</span>
+              <span>Video</span>
+              <span className="hidden sm:inline">•</span>
+              <span>Automation</span>
+              <span className="hidden sm:inline">•</span>
+              <span>Web Apps</span>
+            </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 gap-y-3 text-xs uppercase tracking-[0.15em] text-zinc-600 sm:flex sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
-  <span>AI Content</span>
-  <span className="hidden sm:inline">•</span>
-  <span>Video</span>
-  <span className="hidden sm:inline">•</span>
-  <span>Automation</span>
-  <span className="hidden sm:inline">•</span>
-  <span>Web Apps</span>
-</div>
+          <PortfolioMascot />
         </div>
       </section>
 
@@ -132,6 +135,8 @@ export default function Home() {
               title="AI-Assisted Work Process Improvement"
               description="A lead-review workflow mapped into clear decision steps, with opportunities identified for AI assistance and automation."
               href="/projects/ai-process-improvement"
+              preview="/projects/ai-process-improvement/ai-process-improvement-preview.png"
+              previewAlt="3D avatar at a desk, with an AI workflow connecting ideas to improved results"
             />
           </div>
         </div>
