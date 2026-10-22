@@ -227,7 +227,7 @@ export default function Home() {
           </p>
 
           <a
-            href="#contact"
+            href="mailto:Danielagustin223@gmail.com?subject=Project%20Inquiry&body=Hi%20Daniel%2C%20I%27d%20like%20to%20discuss%20a%20potential%20project%20with%20you."
             className="mx-auto mt-10 block w-fit rounded-full bg-white px-9 py-4 text-sm font-semibold text-black transition hover:scale-105 hover:bg-zinc-200"
           >
             Get in Touch
