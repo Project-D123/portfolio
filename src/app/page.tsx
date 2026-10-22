@@ -54,7 +54,7 @@ export default function Home() {
 </p>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
-              I turn day-to-day business needs into practical digital systems. Start with the order workflow I built for the small ice cream business.
+              I turn day-to-day business needs into practical digital systems, and ideas into engaging visual content. From building an order management system for a small ice cream business to creating AI-assisted visuals and videos, I combine problem-solving, technology, and creativity to deliver useful results.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -98,11 +98,12 @@ export default function Home() {
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             <ProjectCard
               number="01"
-              category="BUSINESS AUTOMATION • WEB APP DEVELOPMENT"
-              title="Small Ice Cream Business Order System"
-              description="A working order management system built for the small ice cream business, connecting order entry, inventory visibility, fulfillment tracking, and reseller sales."
+              category="WEB & APP DEVELOPMENT · BUSINESS AUTOMATION"
+              title="AI-Assisted Web & App Development"
+              description="Practical digital solutions built around real business needs. One example is a point-of-sale and order management system developed for a small ice cream business to manage customer orders, flavor inventory, payments, and reseller sales in one place."
               href="/projects/small-ice-cream-business"
               preview="/projects/small-ice-cream-business/Order_Taking-Portfolio.png"
+              previewAlt="Order entry screen showing flavor availability"
             />
 
             <ProjectCard
@@ -111,6 +112,8 @@ export default function Home() {
               title="AI Visuals"
               description="A brief-led process for developing and refining visual concepts, with selected ideas able to move into finished creative work."
               href="/projects/ai-visuals"
+              preview="/projects/ai-visuals/ai-visuals-preview.png"
+              previewAlt="A visual concept board of storyboard scenes for an ube ice cream campaign"
             />
 
             <ProjectCard
@@ -119,6 +122,8 @@ export default function Home() {
               title="AI Video Creation"
               description="Five finished product videos created with AI-assisted visuals and editing for a small ice cream business."
               href="/projects/ai-video-creation"
+              preview="/projects/ai-video-creation/ai-video-creation-preview.png"
+              previewAlt="Cinematic close-up of purple ube ice cream prepared for a product video"
             />
 
             <ProjectCard
@@ -182,8 +187,8 @@ export default function Home() {
 
 <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-800 sm:grid-cols-2 lg:grid-cols-3">
   {[
-    "Order system — order entry, Today’s Orders, and inventory screens",
-    "Order system — customer, payment, quantity, and pickup workflow",
+    "AI-Assisted Web & App Development — orders, customers, flavor inventory, payments, and reseller sales",
+    "AI-Assisted Web & App Development — order entry, fulfillment, and pickup workflow",
     "AI visuals — brief-led concept development process",
     "AI video — five finished product-storytelling samples",
     "Work process improvement — mapped lead-review workflow",
@@ -275,6 +280,7 @@ function ProjectCard({
   description,
   href,
   preview,
+  previewAlt,
 }: {
   number: string;
   category: string;
@@ -282,6 +288,7 @@ function ProjectCard({
   description: string;
   href: string;
   preview?: string;
+  previewAlt?: string;
 }) {
   return (
     <a
@@ -297,7 +304,7 @@ function ProjectCard({
           {preview && (
             <Image
               src={preview}
-              alt="Order entry screen showing flavor availability"
+              alt={previewAlt ?? ""}
               width={1520}
               height={1034}
               sizes="(max-width: 768px) 100vw, 50vw"

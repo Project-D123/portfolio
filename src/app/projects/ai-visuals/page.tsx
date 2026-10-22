@@ -132,7 +132,8 @@ export default function AIVisuals() {
             <h2 className="mt-4 text-3xl font-semibold">Concept, direction, and refinement</h2>
           </div>
           <div className="space-y-5 leading-7 text-zinc-400">
-            <p>My role is to develop the concept, set visual direction, write and refine prompts, and select images that fit the intended idea.</p>
+            <p>Depending on the project, I can work from client-provided photos or video footage, AI-generated visuals, or a combination of both. For live client footage, I can edit the material in CapCut and shape it into finished content; I can also create AI-assisted visuals and incorporate them into a creative piece.</p>
+            <p>My role can include shaping the concept, editing the selected footage or visuals, and assembling the final content to fit the project brief.</p>
           </div>
         </div>
       </section>

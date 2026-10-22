@@ -32,6 +32,14 @@ const screenshots = {
     width: 2434,
     height: 1624,
   },
+  dashboard: {
+    title: "Dashboard",
+    image: "/projects/small-ice-cream-business/Dashboard-Portfolio.png",
+    description:
+      "The dashboard brings together daily revenue, orders, pints sold, payments, commission, and an order summary by flavor.",
+    width: 2492,
+    height: 1696,
+  },
 };
 
 function SectionLabel({ children }: { children: ReactNode }) {
@@ -178,9 +186,7 @@ export default function SmallIceCreamBusinessOrderSystem() {
           </div>
         </div>
         <div className="mx-auto mt-10 max-w-5xl">
-          <div className="rounded-2xl border border-white/10 bg-zinc-900 px-6 py-5 text-sm leading-6 text-zinc-400">
-            The dashboard brings reseller metrics and daily flavor planning into one view. Its screen capture is not included in this public case study.
-          </div>
+          <SystemGallery screenshots={[screenshots.dashboard]} />
         </div>
       </section>
 
