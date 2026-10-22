@@ -238,6 +238,19 @@ export default function Home() {
           >
             Danielagustin223@gmail.com
           </a>
+          <a
+            href="/Daniel_Agustin_Content_Creator_Resume.pdf"
+            download="Daniel_Agustin_Content_Creator_Resume.pdf"
+            className="mx-auto mt-7 inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-700 px-6 py-3 text-sm font-semibold text-white transition hover:border-zinc-400 hover:bg-zinc-900"
+          >
+            Download Resume
+          </a>
+          <a
+            href="tel:+639761103360"
+            className="mx-auto mt-6 block w-fit max-w-full break-words text-lg font-medium text-zinc-300 transition hover:text-white sm:text-xl"
+          >
+            +63 976 110 3360
+          </a>
         </div>
       </section>
 
