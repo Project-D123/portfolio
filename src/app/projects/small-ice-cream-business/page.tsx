@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import SystemGallery from "./SystemGallery";
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ const screenshots = {
   },
   inventory: {
     title: "Inventory",
-    image: "/projects/small-ice-cream-business/Inventory-Portfolio.png",
+    image: "/projects/small-ice-cream-business/Inventory-Portfolio-Cleaned.png",
     description:
       "Available stock is recorded by flavor and surfaced in the order entry screen.",
     width: 2434,
@@ -34,13 +35,20 @@ const screenshots = {
   },
   dashboard: {
     title: "Dashboard",
-    image: "/projects/small-ice-cream-business/Dashboard-Portfolio.png",
+    image: "/projects/small-ice-cream-business/Dashboard-Portfolio-Cleaned.png",
     description:
       "The dashboard brings together daily revenue, orders, pints sold, payments, commission, and an order summary by flavor.",
     width: 2492,
     height: 1696,
   },
 };
+
+const reportScreenshots = [
+  { title: "Financial Summary", image: "/images/reports/financial-summary.png", width: 2386, height: 1756 },
+  { title: "Invoice", image: "/images/reports/invoice-report.png", width: 2366, height: 1642 },
+  { title: "Sales by Date", image: "/images/reports/sales-by-date.png", width: 2366, height: 1642 },
+  { title: "Sales by Flavor", image: "/images/reports/sales-by-flavor.png", width: 2366, height: 1642 },
+];
 
 function SectionLabel({ children }: { children: ReactNode }) {
   return (
@@ -190,10 +198,49 @@ export default function SmallIceCreamBusinessOrderSystem() {
         </div>
       </section>
 
-      <section className="border-y border-zinc-900 bg-zinc-950 px-6 py-8">
-        <div className="mx-auto flex max-w-5xl flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">Reports · In development</p>
-          <p className="text-sm leading-6 text-zinc-400">A requested reporting section for generating summaries from system data.</p>
+      <section id="reports" className="border-y border-zinc-900 bg-zinc-950 px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <SectionLabel>04 · Client-requested enhancement</SectionLabel>
+          <div className="mt-6 grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <h2 className="text-3xl font-bold">Reports, added in response to a new client need.</h2>
+              <p className="mt-4 text-sm leading-6 text-zinc-500">Complete and working in the live development version.</p>
+            </div>
+            <div className="space-y-5 leading-7 text-zinc-400">
+              <p>
+                <strong className="font-medium text-zinc-200">Problem.</strong> After the
+                initial POS system was developed, the client identified an additional need
+                for a clearer way to review sales activity, invoices, and recorded transactions.
+              </p>
+              <p>
+                <strong className="font-medium text-zinc-200">Solution.</strong> I built
+                the requested Reports tab with Financial Summary, Invoice, Sales by Date,
+                and Sales by Flavor views.
+              </p>
+              <p>
+                <strong className="font-medium text-zinc-200">Why it matters.</strong> The
+                enhancement makes business records easier to review and reflects how I work:
+                listening to client feedback, solving new problems, and improving a solution
+                after its initial delivery.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            {reportScreenshots.map((report) => (
+              <figure key={report.image} className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900">
+                <Image
+                  src={report.image}
+                  alt={`${report.title} report interface with private details blurred`}
+                  width={report.width}
+                  height={report.height}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
+                  className="block h-auto w-full"
+                />
+                <figcaption className="border-t border-white/10 px-5 py-4 font-medium text-white">{report.title}</figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
